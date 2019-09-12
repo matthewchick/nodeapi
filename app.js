@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 // morgan is a middleware that allows us to easily log requests, errors, and more to the console.
 const morgan = require("morgan");  //middleware
+const dotenv = require('dotenv');
+dotenv.config()
 
 // bring in routes
 // const postRoutes = require ('./routes/post')
@@ -18,5 +20,5 @@ app.use(morgan("dev"));
 // use get method, (req, res) is callback function
 app.use('/', postRoutes);
 
-const port = 8080
+const port = process.env.PORT || 8080;
 app.listen(port, () => {console.log(`A nodejs server is listening on port: ${port}`)});
