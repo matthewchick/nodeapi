@@ -12,7 +12,11 @@ module.exports = {
     getPosts
 };
 */
+// past controller to express router
+const express = require('express');
+const postController = require ('../controllers/posts');
 
-exports.getPosts = (req, res) => {
-    res.send("hey what up from express");
-}
+const router = express.Router();
+router.get("/", postController.getPosts);
+
+module.exports = router;
