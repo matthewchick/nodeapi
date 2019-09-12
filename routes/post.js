@@ -12,7 +12,7 @@ module.exports = {
     getPosts
 };
 */
-// past controller to express router
+// past controller to express router whi
 const express = require('express');
 const postController = require ('../controllers/posts');
 

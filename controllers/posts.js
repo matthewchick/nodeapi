@@ -14,5 +14,10 @@ module.exports = {
 */
 
 exports.getPosts = (req, res) => {
-    res.send("hey what up from express!");
-}
+    res.json({
+        posts: [
+            {title: 'First post'},
+            {title: 'Second post'}
+        ]
+    });
+};
